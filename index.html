@@ -12,21 +12,29 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background-color: white;
+      background-color: #ccc;
+      min-height: 1440px;
     }
 
-    .top-spacing {
-      height: 40px;
+    .header-zone {
+      background-color: white;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    .transition-space {
+      height: 20px;
+      background-color: #ccc;
     }
 
     .container {
-      width: 1440px;
+      width: 960px;
       margin: 0 auto;
     }
 
     .row {
       display: flex;
+      align-items: stretch;
     }
 
     .box {
@@ -36,10 +44,6 @@
       box-sizing: border-box;
       text-align: center;
       color: black;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .col-100 { width: 100%; }
@@ -48,61 +52,52 @@
     .col-50 { width: 50%; }
     .col-33 { width: 33.33%; }
 
-    .gray-section {
-      background-color: #ccc;
-      padding: 40px 0;
-    }
-
     .wrapper {
       background: white;
       border-radius: 12px;
       padding: 20px;
     }
-
-    .header-spacing {
-      margin-bottom: 40px;
-    }
   </style>
 </head>
 <body>
-  <div class="top-spacing"></div>
-
-  <header id="site-header">
-    <div class="container header-spacing">
-      <div class="row">
-        <div class="box col-100">
-          header: col-100<br />This entire layout is 1440px wide
+  <div class="header-zone">
+    <header id="site-header">
+      <div class="container">
+        <div class="row">
+          <div class="box col-100">
+            header: col-100<br />This entire layout is 1440px tall
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
+
+  <div class="transition-space"></div>
 
   <main>
-    <div class="gray-section">
-      <div class="container">
-        <div class="wrapper" id="content">
-          <div class="row">
-            <div class="box col-a">col-a</div>
-            <div class="box col-b">col-b<br />(width 200px)</div>
-          </div>
-
-          <div class="row">
-            <div class="box col-50">col-50</div>
-            <div class="box col-50">col-50</div>
-          </div>
-
-          <div class="row">
-            <div class="box col-33">col-33</div>
-            <div class="box col-33">col-33</div>
-            <div class="box col-33">col-33</div>
-          </div>
-
-          <footer>
-            <div class="row">
-              <div class="box col-100">footer: col-100</div>
-            </div>
-          </footer>
+    <div class="container">
+      <div class="wrapper" id="content">
+        <div class="row">
+          <div class="box col-a">col-a</div>
+          <div class="box col-b">col-b<br />(width 200px)</div>
         </div>
+
+        <div class="row">
+          <div class="box col-50">col-50</div>
+          <div class="box col-50">col-50</div>
+        </div>
+
+        <div class="row">
+          <div class="box col-33">col-33</div>
+          <div class="box col-33">col-33</div>
+          <div class="box col-33">col-33</div>
+        </div>
+
+        <footer>
+          <div class="row">
+            <div class="box col-100">footer: col-100</div>
+          </div>
+        </footer>
       </div>
     </div>
   </main>
