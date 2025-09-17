@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Assignment 3</title>
   <link
     rel="stylesheet"
@@ -13,6 +12,7 @@
     body {
       margin: 0;
       background-color: #666666;
+      min-height: 1440px;
     }
 
     .header-zone {
@@ -34,6 +34,7 @@
     .row {
       display: flex;
       align-items: stretch;
+      height: 100px;
     }
 
     .box {
@@ -43,6 +44,7 @@
       box-sizing: border-box;
       text-align: center;
       color: black;
+      width: 100%;
     }
 
     .col-100 { width: 100%; }
@@ -60,7 +62,7 @@
 </head>
 <body>
   <div class="header-zone">
-    <header id="site-header">
+    <header>
       <div class="container">
         <div class="row">
           <div class="box col-100">
@@ -75,7 +77,7 @@
 
   <main>
     <div class="container">
-      <div class="wrapper" id="content">
+      <div class="wrapper">
         <div class="row">
           <div class="box col-a">col-a</div>
           <div class="box col-b">col-b<br />(width 200px)</div>
